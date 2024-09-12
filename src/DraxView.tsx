@@ -562,13 +562,11 @@ export const DraxView = (
 		],
 	);
 
-	const setViewRefs = useCallback(
+	const setViewRefs =
 		(ref: View | null) => {
 			viewRef.current = ref;
 			nodeHandleRef.current = ref && findNodeHandle(ref);
-		},
-		[],
-	);
+		}
 
 	const gesture = useMemo(
 		() => longPress({
