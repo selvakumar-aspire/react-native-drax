@@ -134,7 +134,7 @@ const DraxListUnforwarded = <T extends unknown>(
 		() => {
 			const itemMeasurements = itemMeasurementsRef.current;
 			const registrations = registrationsRef.current;
-			const shifts = shiftsRef.current;
+			const shifts = shiftsRef.current
 			if (itemMeasurements.length > itemCount) {
 				itemMeasurements.splice(itemCount - itemMeasurements.length);
 			} else {
@@ -149,9 +149,9 @@ const DraxListUnforwarded = <T extends unknown>(
 					registrations.push(undefined);
 				}
 			}
-			if (shifts.length > itemCount) {
-				shifts.splice(itemCount - shifts.length);
-			} else {
+			 if (shifts.length > itemCount) {
+				  shifts.splice(itemCount - shifts.length);
+			 } else {
 				while (shifts.length < itemCount) {
 					shifts.push({
 						targetValue: 0,
